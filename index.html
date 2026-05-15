@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
@@ -7,352 +8,353 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --bg: #0a0a0a;
-    --surface: #141414;
-    --border: rgba(255,255,255,0.08);
-    --border-strong: rgba(255,255,255,0.14);
-    --text-primary: #f0ede8;
-    --text-secondary: #8a8780;
-    --text-tertiary: #555250;
-    --accent: #c8401e;
-    --accent-light: #1f1008;
-    --gold: #c9982a;
-    --gold-light: #1a1508;
-    --green: #3aad6e;
-    --green-light: #081a10;
-    --blue: #5a9fd4;
-    --blue-light: #080f1a;
-    --purple: #9b82d4;
-    --purple-light: #10091f;
-    --radius: 10px;
-    --radius-sm: 6px;
-  }
+:root {
+–bg: #0a0a0a;
+–surface: #141414;
+–border: rgba(255,255,255,0.08);
+–border-strong: rgba(255,255,255,0.14);
+–text-primary: #f0ede8;
+–text-secondary: #8a8780;
+–text-tertiary: #555250;
+–accent: #c8401e;
+–accent-light: #1f1008;
+–gold: #c9982a;
+–gold-light: #1a1508;
+–green: #3aad6e;
+–green-light: #081a10;
+–blue: #5a9fd4;
+–blue-light: #080f1a;
+–purple: #9b82d4;
+–purple-light: #10091f;
+–radius: 10px;
+–radius-sm: 6px;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap');
+@import url(‘https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap’);
 
-  body {
-    font-family: 'DM Sans', system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text-primary);
-    min-height: 100vh;
-    padding: 2rem 1rem 4rem;
-  }
+body {
+font-family: ‘DM Sans’, system-ui, sans-serif;
+background: var(–bg);
+color: var(–text-primary);
+min-height: 100vh;
+padding: 2rem 1rem 4rem;
+}
 
-  .container { max-width: 720px; margin: 0 auto; }
+.container { max-width: 720px; margin: 0 auto; }
 
-  header {
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 0.5px solid var(--border-strong);
-  }
+header {
+margin-bottom: 2.5rem;
+padding-bottom: 1.5rem;
+border-bottom: 0.5px solid var(–border-strong);
+}
 
-  header .eyebrow {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 8px;
-  }
+header .eyebrow {
+font-size: 11px;
+font-weight: 500;
+letter-spacing: .12em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 8px;
+}
 
-  header h1 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 40px;
-    font-weight: 500;
-    color: var(--text-primary);
-    line-height: 1.1;
-    margin-bottom: 10px;
-  }
+header h1 {
+font-family: ‘Cormorant Garamond’, Georgia, serif;
+font-size: 40px;
+font-weight: 500;
+color: var(–text-primary);
+line-height: 1.1;
+margin-bottom: 10px;
+}
 
-  header p {
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-  }
+header p {
+font-size: 14px;
+color: var(–text-secondary);
+line-height: 1.6;
+}
 
-  .meta-row {
-    display: flex;
-    gap: 20px;
-    margin-top: 14px;
-    flex-wrap: wrap;
-  }
+.meta-row {
+display: flex;
+gap: 20px;
+margin-top: 14px;
+flex-wrap: wrap;
+}
 
-  .meta-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    color: var(--text-secondary);
-  }
+.meta-item {
+display: flex;
+align-items: center;
+gap: 6px;
+font-size: 12px;
+color: var(–text-secondary);
+}
 
-  .meta-item strong { color: var(--text-primary); font-weight: 500; }
+.meta-item strong { color: var(–text-primary); font-weight: 500; }
 
-  .day-tabs {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 24px;
-    flex-wrap: wrap;
-  }
+.day-tabs {
+display: flex;
+gap: 6px;
+margin-bottom: 24px;
+flex-wrap: wrap;
+}
 
-  .tab {
-    padding: 7px 15px;
-    border-radius: 20px;
-    border: 0.5px solid var(--border-strong);
-    background: var(--surface);
-    font-size: 12.5px;
-    font-weight: 500;
-    cursor: pointer;
-    color: var(--text-secondary);
-    transition: all .15s ease;
-    font-family: inherit;
-  }
+.tab {
+padding: 7px 15px;
+border-radius: 20px;
+border: 0.5px solid var(–border-strong);
+background: var(–surface);
+font-size: 12.5px;
+font-weight: 500;
+cursor: pointer;
+color: var(–text-secondary);
+transition: all .15s ease;
+font-family: inherit;
+}
 
-  .tab:hover { background: var(--bg); border-color: var(--text-secondary); }
-  .tab.active { background: var(--text-primary); color: var(--bg); border-color: var(--text-primary); }
+.tab:hover { background: var(–bg); border-color: var(–text-secondary); }
+.tab.active { background: var(–text-primary); color: var(–bg); border-color: var(–text-primary); }
 
-  .day-panel { display: none; }
-  .day-panel.active { display: block; animation: fadeIn .2s ease; }
+.day-panel { display: none; }
+.day-panel.active { display: block; animation: fadeIn .2s ease; }
 
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 
-  .day-header { margin-bottom: 22px; }
+.day-header { margin-bottom: 22px; }
 
-  .day-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-weight: 500;
-    color: var(--text-primary);
-    margin-bottom: 4px;
-  }
+.day-header h2 {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 26px;
+font-weight: 500;
+color: var(–text-primary);
+margin-bottom: 4px;
+}
 
-  .day-header p { font-size: 13px; color: var(--text-secondary); }
+.day-header p { font-size: 13px; color: var(–text-secondary); }
 
-  .legend {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-bottom: 22px;
-    padding: 12px 14px;
-    background: var(--surface);
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius-sm);
-  }
+.legend {
+display: flex;
+gap: 16px;
+flex-wrap: wrap;
+margin-bottom: 22px;
+padding: 12px 14px;
+background: var(–surface);
+border: 0.5px solid var(–border);
+border-radius: var(–radius-sm);
+}
 
-  .leg { display: flex; align-items: center; gap: 5px; font-size: 11.5px; color: var(--text-secondary); }
-  .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.leg { display: flex; align-items: center; gap: 5px; font-size: 11.5px; color: var(–text-secondary); }
+.dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
-  .timeline { position: relative; padding-left: 32px; }
+.timeline { position: relative; padding-left: 32px; }
 
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 9px;
-    top: 10px;
-    bottom: 10px;
-    width: 1px;
-    background: var(--border-strong);
-  }
+.timeline::before {
+content: ‘’;
+position: absolute;
+left: 9px;
+top: 10px;
+bottom: 10px;
+width: 1px;
+background: var(–border-strong);
+}
 
-  .slot { position: relative; margin-bottom: 20px; }
+.slot { position: relative; margin-bottom: 20px; }
 
-  .slot::before {
-    content: '';
-    position: absolute;
-    left: -23px;
-    top: 8px;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: var(--surface);
-    border: 1.5px solid var(--border-strong);
-  }
+.slot::before {
+content: ‘’;
+position: absolute;
+left: -23px;
+top: 8px;
+width: 9px;
+height: 9px;
+border-radius: 50%;
+background: var(–surface);
+border: 1.5px solid var(–border-strong);
+}
 
-  .slot.highlight::before { background: #e8c87a; border-color: #e8c87a; }
-  .slot.food::before { background: var(--gold); border-color: var(--gold); }
-  .slot.transport::before { background: var(--green); border-color: var(--green); }
-  .slot.rest::before { background: var(--purple); border-color: var(--purple); }
+.slot.highlight::before { background: #e8c87a; border-color: #e8c87a; }
+.slot.food::before { background: var(–gold); border-color: var(–gold); }
+.slot.transport::before { background: var(–green); border-color: var(–green); }
+.slot.rest::before { background: var(–purple); border-color: var(–purple); }
 
-  .slot-card {
-    background: var(--surface);
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius);
-    padding: 14px 16px;
-  }
+.slot-card {
+background: var(–surface);
+border: 0.5px solid var(–border);
+border-radius: var(–radius);
+padding: 14px 16px;
+}
 
-  .slot.highlight .slot-card { border-left: 2.5px solid #e8c87a; }
-  .slot.food .slot-card { border-left: 2.5px solid var(--gold); }
-  .slot.transport .slot-card { border-left: 2.5px solid var(--green); }
-  .slot.rest .slot-card { border-left: 2.5px solid var(--purple); }
+.slot.highlight .slot-card { border-left: 2.5px solid #e8c87a; }
+.slot.food .slot-card { border-left: 2.5px solid var(–gold); }
+.slot.transport .slot-card { border-left: 2.5px solid var(–green); }
+.slot.rest .slot-card { border-left: 2.5px solid var(–purple); }
 
-  .time {
-    font-size: 10.5px;
-    font-weight: 500;
-    color: var(--text-tertiary);
-    letter-spacing: .05em;
-    margin-bottom: 3px;
-    text-transform: uppercase;
-  }
+.time {
+font-size: 10.5px;
+font-weight: 500;
+color: var(–text-tertiary);
+letter-spacing: .05em;
+margin-bottom: 3px;
+text-transform: uppercase;
+}
 
-  .slot-title {
-    font-size: 14.5px;
-    font-weight: 500;
-    color: var(--text-primary);
-    margin-bottom: 5px;
-  }
+.slot-title {
+font-size: 14.5px;
+font-weight: 500;
+color: var(–text-primary);
+margin-bottom: 5px;
+}
 
-  .slot-desc {
-    font-size: 13px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-  }
+.slot-desc {
+font-size: 13px;
+color: var(–text-secondary);
+line-height: 1.6;
+}
 
-  .slot-desc strong { color: var(--text-primary); font-weight: 500; }
-  .slot-desc em { font-style: italic; color: var(--text-tertiary); }
+.slot-desc strong { color: var(–text-primary); font-weight: 500; }
+.slot-desc em { font-style: italic; color: var(–text-tertiary); }
 
-  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
 
-  .tag {
-    display: inline-block;
-    font-size: 11px;
-    padding: 2px 9px;
-    border-radius: 12px;
-    font-weight: 500;
-  }
+.tag {
+display: inline-block;
+font-size: 11px;
+padding: 2px 9px;
+border-radius: 12px;
+font-weight: 500;
+}
 
-  .tag.book { background: #2a0d0d; color: #e06060; }
-  .tag.tip { background: var(--blue-light); color: var(--blue); }
-  .tag.warn { background: var(--gold-light); color: var(--gold); }
-  .tag.price { background: var(--green-light); color: var(--green); }
+.tag.book { background: #2a0d0d; color: #e06060; }
+.tag.tip { background: var(–blue-light); color: var(–blue); }
+.tag.warn { background: var(–gold-light); color: var(–gold); }
+.tag.price { background: var(–green-light); color: var(–green); }
 
-  /* Budget table */
-  .budget-table { width: 100%; border-collapse: collapse; }
-  .budget-table tr { border-bottom: 0.5px solid var(--border); }
-  .budget-table tr:last-child { border-bottom: none; }
-  .budget-table td { padding: 10px 0; font-size: 13.5px; vertical-align: top; }
-  .budget-table td:last-child { text-align: right; font-weight: 500; color: var(--text-primary); white-space: nowrap; }
-  .budget-table .label { color: var(--text-secondary); }
-  .budget-table .sub { font-size: 11.5px; color: var(--text-tertiary); display: block; margin-top: 2px; }
-  .budget-table .total-row td { font-size: 15px; font-weight: 500; padding-top: 14px; }
+/* Budget table */
+.budget-table { width: 100%; border-collapse: collapse; }
+.budget-table tr { border-bottom: 0.5px solid var(–border); }
+.budget-table tr:last-child { border-bottom: none; }
+.budget-table td { padding: 10px 0; font-size: 13.5px; vertical-align: top; }
+.budget-table td:last-child { text-align: right; font-weight: 500; color: var(–text-primary); white-space: nowrap; }
+.budget-table .label { color: var(–text-secondary); }
+.budget-table .sub { font-size: 11.5px; color: var(–text-tertiary); display: block; margin-top: 2px; }
+.budget-table .total-row td { font-size: 15px; font-weight: 500; padding-top: 14px; }
 
-  .note-box {
-    background: var(--blue-light);
-    border: 0.5px solid rgba(90,159,212,.15);
-    border-radius: var(--radius-sm);
-    padding: 12px 14px;
-    font-size: 13px;
-    color: var(--blue);
-    line-height: 1.6;
-    margin-top: 16px;
-  }
+.note-box {
+background: var(–blue-light);
+border: 0.5px solid rgba(90,159,212,.15);
+border-radius: var(–radius-sm);
+padding: 12px 14px;
+font-size: 13px;
+color: var(–blue);
+line-height: 1.6;
+margin-top: 16px;
+}
 
-  /* Urgency levels in rezervari */
-  .urgency-pill {
-    display: inline-block;
-    font-size: 10.5px;
-    font-weight: 600;
-    padding: 2px 10px;
-    border-radius: 12px;
-    margin-bottom: 6px;
-    text-transform: uppercase;
-    letter-spacing: .04em;
-  }
+/* Urgency levels in rezervari */
+.urgency-pill {
+display: inline-block;
+font-size: 10.5px;
+font-weight: 600;
+padding: 2px 10px;
+border-radius: 12px;
+margin-bottom: 6px;
+text-transform: uppercase;
+letter-spacing: .04em;
+}
 
-  .urgency-pill.red { background: #2a0d0d; color: #e06060; }
-  .urgency-pill.yellow { background: var(--gold-light); color: var(--gold); }
-  .urgency-pill.green { background: var(--green-light); color: var(--green); }
+.urgency-pill.red { background: #2a0d0d; color: #e06060; }
+.urgency-pill.yellow { background: var(–gold-light); color: var(–gold); }
+.urgency-pill.green { background: var(–green-light); color: var(–green); }
 
-  .gmaps {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--blue);
-    text-decoration: none;
-    background: var(--blue-light);
-    border: 0.5px solid rgba(90,159,212,.2);
-    border-radius: 10px;
-    padding: 2px 9px;
-    margin-top: 8px;
-    transition: opacity .15s;
-  }
-  .gmaps:hover { opacity: .75; }
+.gmaps {
+display: inline-flex;
+align-items: center;
+gap: 4px;
+font-size: 11px;
+font-weight: 500;
+color: var(–blue);
+text-decoration: none;
+background: var(–blue-light);
+border: 0.5px solid rgba(90,159,212,.2);
+border-radius: 10px;
+padding: 2px 9px;
+margin-top: 8px;
+transition: opacity .15s;
+}
+.gmaps:hover { opacity: .75; }
 
-  /* Rezervari checklist */
-  .rez-item {
-    background: var(--surface);
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius);
-    padding: 14px 16px;
-    margin-bottom: 12px;
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    transition: border-color .2s;
-  }
-  .rez-item.done { border-color: rgba(58,173,110,.3); background: #081a10; }
-  .rez-check {
-    width: 20px;
-    height: 20px;
-    border-radius: 6px;
-    border: 1.5px solid var(--border-strong);
-    flex-shrink: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2px;
-    transition: all .15s;
-    background: transparent;
-  }
-  .rez-item.done .rez-check {
-    background: var(--green);
-    border-color: var(--green);
-  }
-  .rez-check svg { display: none; }
-  .rez-item.done .rez-check svg { display: block; }
-  .rez-body { flex: 1; min-width: 0; }
-  .rez-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
-  .rez-title { font-size: 14px; font-weight: 500; color: var(--text-primary); }
-  .rez-item.done .rez-title { color: var(--text-secondary); text-decoration: line-through; }
-  .rez-pill {
-    font-size: 10px;
-    font-weight: 600;
-    padding: 1px 8px;
-    border-radius: 10px;
-    text-transform: uppercase;
-    letter-spacing: .04em;
-  }
-  .rez-pill.red { background: #2a0d0d; color: #e06060; }
-  .rez-pill.yellow { background: var(--gold-light); color: var(--gold); }
-  .rez-pill.green { background: var(--green-light); color: var(--green); }
-  .rez-desc { font-size: 12.5px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 8px; }
-  .rez-links { display: flex; flex-wrap: wrap; gap: 6px; }
-  .rez-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 11.5px;
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: 10px;
-    padding: 3px 10px;
-    border: 0.5px solid;
-    transition: opacity .15s;
-  }
-  .rez-link:hover { opacity: .75; }
-  .rez-link.primary { background: #0d1e0d; color: var(--green); border-color: rgba(58,173,110,.3); }
-  .rez-link.maps { background: var(--blue-light); color: var(--blue); border-color: rgba(90,159,212,.25); }
-  .rez-link.phone { background: #1a1008; color: var(--gold); border-color: rgba(201,152,42,.25); }
-  .rez-price { font-size: 11px; color: var(--text-tertiary); margin-top: 5px; }
+/* Rezervari checklist */
+.rez-item {
+background: var(–surface);
+border: 0.5px solid var(–border);
+border-radius: var(–radius);
+padding: 14px 16px;
+margin-bottom: 12px;
+display: flex;
+gap: 14px;
+align-items: flex-start;
+transition: border-color .2s;
+}
+.rez-item.done { border-color: rgba(58,173,110,.3); background: #081a10; }
+.rez-check {
+width: 20px;
+height: 20px;
+border-radius: 6px;
+border: 1.5px solid var(–border-strong);
+flex-shrink: 0;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 2px;
+transition: all .15s;
+background: transparent;
+}
+.rez-item.done .rez-check {
+background: var(–green);
+border-color: var(–green);
+}
+.rez-check svg { display: none; }
+.rez-item.done .rez-check svg { display: block; }
+.rez-body { flex: 1; min-width: 0; }
+.rez-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
+.rez-title { font-size: 14px; font-weight: 500; color: var(–text-primary); }
+.rez-item.done .rez-title { color: var(–text-secondary); text-decoration: line-through; }
+.rez-pill {
+font-size: 10px;
+font-weight: 600;
+padding: 1px 8px;
+border-radius: 10px;
+text-transform: uppercase;
+letter-spacing: .04em;
+}
+.rez-pill.red { background: #2a0d0d; color: #e06060; }
+.rez-pill.yellow { background: var(–gold-light); color: var(–gold); }
+.rez-pill.green { background: var(–green-light); color: var(–green); }
+.rez-desc { font-size: 12.5px; color: var(–text-secondary); line-height: 1.55; margin-bottom: 8px; }
+.rez-links { display: flex; flex-wrap: wrap; gap: 6px; }
+.rez-link {
+display: inline-flex;
+align-items: center;
+gap: 4px;
+font-size: 11.5px;
+font-weight: 500;
+text-decoration: none;
+border-radius: 10px;
+padding: 3px 10px;
+border: 0.5px solid;
+transition: opacity .15s;
+}
+.rez-link:hover { opacity: .75; }
+.rez-link.primary { background: #0d1e0d; color: var(–green); border-color: rgba(58,173,110,.3); }
+.rez-link.maps { background: var(–blue-light); color: var(–blue); border-color: rgba(90,159,212,.25); }
+.rez-link.phone { background: #1a1008; color: var(–gold); border-color: rgba(201,152,42,.25); }
+.rez-price { font-size: 11px; color: var(–text-tertiary); margin-top: 5px; }
 
-  @media (max-width: 480px) {
-    header h1 { font-size: 30px; }
-    .day-tabs { gap: 4px; }
-    .tab { padding: 6px 11px; font-size: 12px; }
-  }
+@media (max-width: 480px) {
+header h1 { font-size: 30px; }
+.day-tabs { gap: 4px; }
+.tab { padding: 6px 11px; font-size: 12px; }
+}
 </style>
+
 </head>
 <body>
 <div class="container">
@@ -385,6 +387,7 @@
   </div>
 
   <!-- JOI -->
+
   <div class="day-panel active" id="day-joi">
     <div class="day-header">
       <h2>Joi 14 Mai — Sosire + Foro + Colosseum</h2>
@@ -392,86 +395,90 @@
     </div>
     <div class="timeline">
 
-      <div class="slot transport">
-        <div class="slot-card">
-          <div class="time">09:00</div>
-          <div class="slot-title">Aterizare Fiumicino</div>
-          <div class="slot-desc">Bagaje + vamă: ~30–40 min. Ieșiți la <strong>Arrivals</strong>, rândul oficial <strong>TAXI UFFICIALE</strong> — tarif fix <strong>48€</strong> pentru centru Roma. Nu acceptați oferte spontane în terminal.</div>
-          <a href="https://maps.google.com/?q=Aeroporto+Leonardo+da+Vinci+Fiumicino+Roma" target="_blank" class="gmaps">📍 Aeroportul Fiumicino</a>
-        </div>
-      </div>
-
-      <div class="slot transport">
-        <div class="slot-card">
-          <div class="time">10:00 – 10:45</div>
-          <div class="slot-title">Transfer → HT6 Hotel Rome</div>
-          <div class="slot-desc">Lăsați bagajele la recepție (check-in de obicei la 15:00, dar ei acceptă bagajele oricând). Timp suficient înainte de intrarea la Foro.</div>
-          <a href="https://maps.google.com/?q=HT6+Hotel+Rome,+Via+del+Tempio+6,+Roma" target="_blank" class="gmaps">📍 HT6 Hotel Rome</a>
-        </div>
-      </div>
-
-      <div class="slot food">
-        <div class="slot-card">
-          <div class="time">10:45 – 11:15</div>
-          <div class="slot-title">Prima espresso în Roma ☕</div>
-          <div class="slot-desc">Cafea + cornetto la un bar de cartier. Regula de aur: stați la tejghea — e mai ieftin și mai autentic decât la masă.</div>
-          <div class="tags"><span class="tag price">~3€ / 2 persoane</span></div>
-        </div>
-      </div>
-
-      <div class="slot highlight">
-        <div class="slot-card">
-          <div class="time">11:15 – 14:30</div>
-          <div class="slot-title">Foro Romano + Palatino (~3 ore)</div>
-          <div class="slot-desc">Intrați pe <strong>Via della Salara Vecchia</strong> — biglietteria secundară cu coadă mult mai scurtă. Biletul este combinat cu Colosseum-ul de la 15:00. Palatino are vedere panoramică spre Circus Maximus — mergeți acolo înainte de prânz cât e lumina bună.</div>
-          <div class="tags"><span class="tag price">18€/pers (inclus în biletul Colosseum)</span></div>
-          <a href="https://maps.google.com/?q=Foro+Romano,+Via+Sacra,+Roma" target="_blank" class="gmaps">📍 Foro Romano — intrare Via Salara Vecchia</a>
-        </div>
-      </div>
-
-      <div class="slot food">
-        <div class="slot-card">
-          <div class="time">14:30 – 15:00</div>
-          <div class="slot-title">Prânz rapid înainte de Colosseum</div>
-          <div class="slot-desc">Aveți 30 de minute. Mergeți pe <strong>Via Labicana</strong> — o stradă în spate față de Colosseum, prețuri normale. Un panino sau o pizza al taglio.</div>
-          <div class="tags"><span class="tag price">~10–12€ / 2 pers</span><span class="tag warn">Nu întârziați — bilet la 15:00</span></div>
-          <a href="https://maps.google.com/?q=Via+Labicana,+Roma" target="_blank" class="gmaps">📍 Via Labicana</a>
-        </div>
-      </div>
-
-      <div class="slot highlight">
-        <div class="slot-card">
-          <div class="time">15:00 – 19:00</div>
-          <div class="slot-title">Colosseum (~4 ore cu tot complexul) 🏟️</div>
-          <div class="slot-desc">Intrare cu biletul rezervat la ora exactă — fără coadă. <strong>Arena floor</strong> (podeaua arenei) inclusă în biletul standard. Dacă vreți etajele superioare cu vedere completă costă 5€ extra. Aveți timp din belșug — nu vă grăbiți.</div>
-          <div class="tags"><span class="tag tip">Intrați exact la 15:00 — biletul e pe oră fixă</span></div>
-          <a href="https://maps.google.com/?q=Colosseo,+Piazza+del+Colosseo,+Roma" target="_blank" class="gmaps">📍 Colosseum</a>
-        </div>
-      </div>
-
-      <div class="slot">
-        <div class="slot-card">
-          <div class="time">19:00 – 20:00</div>
-          <div class="slot-title">Arco di Costantino + refresh la hotel</div>
-          <div class="slot-desc">Arcul triumfal e chiar la ieșirea din Colosseum — 5 minute. Apoi taxi sau 20 min pe jos înapoi la hotel pentru refresh înainte de cină.</div>
-          <a href="https://maps.google.com/?q=Arco+di+Costantino,+Roma" target="_blank" class="gmaps">📍 Arco di Costantino</a>
-        </div>
-      </div>
-
-      <div class="slot food">
-        <div class="slot-card">
-          <div class="time">20:30 ✅</div>
-          <div class="slot-title">Cină rezervată — Testaccio 🍝</div>
-          <div class="slot-desc"><strong>Felice a Testaccio</strong> — rezervare confirmată. Carbonara și cacio e pepe autentice, în cartierul unde s-a inventat bucătăria romană. ~20 min pe jos sau taxi 8€ de la hotel.</div>
-          <div class="tags"><span class="tag price">~35–45€ / 2 pers</span></div>
-          <a href="https://maps.google.com/?q=Felice+a+Testaccio,+Via+Mastro+Giorgio+29,+Roma" target="_blank" class="gmaps">📍 Felice a Testaccio</a>
-        </div>
-      </div>
-
+```
+  <div class="slot transport">
+    <div class="slot-card">
+      <div class="time">09:00</div>
+      <div class="slot-title">Aterizare Fiumicino</div>
+      <div class="slot-desc">Bagaje + vamă: ~30–40 min. Ieșiți la <strong>Arrivals</strong>, rândul oficial <strong>TAXI UFFICIALE</strong> — tarif fix <strong>48€</strong> pentru centru Roma. Nu acceptați oferte spontane în terminal.</div>
+      <a href="https://maps.google.com/?q=Aeroporto+Leonardo+da+Vinci+Fiumicino+Roma" target="_blank" class="gmaps">📍 Aeroportul Fiumicino</a>
     </div>
   </div>
 
+  <div class="slot transport">
+    <div class="slot-card">
+      <div class="time">10:00 – 10:45</div>
+      <div class="slot-title">Transfer → HT6 Hotel Rome</div>
+      <div class="slot-desc">Lăsați bagajele la recepție (check-in de obicei la 15:00, dar ei acceptă bagajele oricând). Timp suficient înainte de intrarea la Foro.</div>
+      <a href="https://maps.google.com/?q=HT6+Hotel+Rome,+Via+del+Tempio+6,+Roma" target="_blank" class="gmaps">📍 HT6 Hotel Rome</a>
+    </div>
+  </div>
+
+  <div class="slot food">
+    <div class="slot-card">
+      <div class="time">10:45 – 11:15</div>
+      <div class="slot-title">Prima espresso în Roma ☕</div>
+      <div class="slot-desc">Cafea + cornetto la un bar de cartier. Regula de aur: stați la tejghea — e mai ieftin și mai autentic decât la masă.</div>
+      <div class="tags"><span class="tag price">~3€ / 2 persoane</span></div>
+    </div>
+  </div>
+
+  <div class="slot highlight">
+    <div class="slot-card">
+      <div class="time">11:15 – 14:30</div>
+      <div class="slot-title">Foro Romano + Palatino (~3 ore)</div>
+      <div class="slot-desc">Intrați pe <strong>Via della Salara Vecchia</strong> — biglietteria secundară cu coadă mult mai scurtă. Biletul este combinat cu Colosseum-ul de la 15:00. Palatino are vedere panoramică spre Circus Maximus — mergeți acolo înainte de prânz cât e lumina bună.</div>
+      <div class="tags"><span class="tag price">18€/pers (inclus în biletul Colosseum)</span></div>
+      <a href="https://maps.google.com/?q=Foro+Romano,+Via+Sacra,+Roma" target="_blank" class="gmaps">📍 Foro Romano — intrare Via Salara Vecchia</a>
+    </div>
+  </div>
+
+  <div class="slot food">
+    <div class="slot-card">
+      <div class="time">14:30 – 15:00</div>
+      <div class="slot-title">Prânz rapid înainte de Colosseum</div>
+      <div class="slot-desc">Aveți 30 de minute. Mergeți pe <strong>Via Labicana</strong> — o stradă în spate față de Colosseum, prețuri normale. Un panino sau o pizza al taglio.</div>
+      <div class="tags"><span class="tag price">~10–12€ / 2 pers</span><span class="tag warn">Nu întârziați — bilet la 15:00</span></div>
+      <a href="https://maps.google.com/?q=Via+Labicana,+Roma" target="_blank" class="gmaps">📍 Via Labicana</a>
+    </div>
+  </div>
+
+  <div class="slot highlight">
+    <div class="slot-card">
+      <div class="time">15:00 – 19:00</div>
+      <div class="slot-title">Colosseum (~4 ore cu tot complexul) 🏟️</div>
+      <div class="slot-desc">Intrare cu biletul rezervat la ora exactă — fără coadă. <strong>Arena floor</strong> (podeaua arenei) inclusă în biletul standard. Dacă vreți etajele superioare cu vedere completă costă 5€ extra. Aveți timp din belșug — nu vă grăbiți.</div>
+      <div class="tags"><span class="tag tip">Intrați exact la 15:00 — biletul e pe oră fixă</span></div>
+      <a href="https://maps.google.com/?q=Colosseo,+Piazza+del+Colosseo,+Roma" target="_blank" class="gmaps">📍 Colosseum</a>
+    </div>
+  </div>
+
+  <div class="slot">
+    <div class="slot-card">
+      <div class="time">19:00 – 20:00</div>
+      <div class="slot-title">Arco di Costantino + refresh la hotel</div>
+      <div class="slot-desc">Arcul triumfal e chiar la ieșirea din Colosseum — 5 minute. Apoi taxi sau 20 min pe jos înapoi la hotel pentru refresh înainte de cină.</div>
+      <a href="https://maps.google.com/?q=Arco+di+Costantino,+Roma" target="_blank" class="gmaps">📍 Arco di Costantino</a>
+    </div>
+  </div>
+
+  <div class="slot food">
+    <div class="slot-card">
+      <div class="time">20:30 ✅</div>
+      <div class="slot-title">Cină rezervată — Testaccio 🍝</div>
+      <div class="slot-desc"><strong>Felice a Testaccio</strong> — rezervare confirmată. Carbonara și cacio e pepe autentice, în cartierul unde s-a inventat bucătăria romană. ~20 min pe jos sau taxi 8€ de la hotel.</div>
+      <div class="tags"><span class="tag price">~35–45€ / 2 pers</span></div>
+      <a href="https://maps.google.com/?q=Felice+a+Testaccio,+Via+Mastro+Giorgio+29,+Roma" target="_blank" class="gmaps">📍 Felice a Testaccio</a>
+    </div>
+  </div>
+
+</div>
+```
+
+  </div>
+
   <!-- VINERI -->
+
   <div class="day-panel" id="day-vin">
     <div class="day-header">
       <h2>Vineri 15 Mai — Centro Storico</h2>
@@ -479,185 +486,234 @@
     </div>
     <div class="timeline">
 
-      <div class="slot food">
-        <div class="slot-card">
-          <div class="time">08:00</div>
-          <div class="slot-title">Mic dejun la hotel</div>
-          <div class="slot-desc">Profitați de micul dejun inclus. Plecați devreme — Fontana di Trevi la 08:45 e o altă lume față de ora 10.</div>
-          <a href="https://maps.google.com/?q=HT6+Hotel+Rome,+Via+del+Tempio+6,+Roma" target="_blank" class="gmaps">📍 HT6 Hotel Rome</a>
-        </div>
-      </div>
-
-      <div class="slot highlight">
-        <div class="slot-card">
-          <div class="time">08:45 – 09:45</div>
-          <div class="slot-title">Fontana di Trevi 🌊</div>
-          <div class="slot-desc">De la hotel e 15 min pe jos. La ora aceasta sunt maxim 20–30 persoane — e singura fereastră când funcționează magia locului. Aruncați moneda, faceți fotografiile, bucurați-vă fără îmbulzeală.</div>
-          <div class="tags"><span class="tag tip">Sosire înainte de 09:00 — esențial</span><span class="tag price">Gratuit</span></div>
-          <a href="https://maps.google.com/?q=Fontana+di+Trevi,+Roma" target="_blank" class="gmaps">📍 Fontana di Trevi</a>
-        </div>
-      </div>
-
-      <div class="slot highlight">
-        <div class="slot-card">
-          <div class="time">09:45 – 10:45</div>
-          <div class="slot-title">Piazza di Spagna + Scările Spaniei</div>
-          <div class="slot-desc">10 min pe jos de la Fontana di Trevi. Cele 135 de trepte duc la <strong>Trinità dei Monti</strong> — vederea de sus e frumoasă. Dimineața e și cel mai bun moment înainte să se umple.</div>
-          <div class="tags"><span class="tag price">Gratuit</span></div>
-          <a href="https://maps.google.com/?q=Piazza+di+Spagna,+Roma" target="_blank" class="gmaps">📍 Piazza di Spagna</a>
-        </div>
-      </div>
-
-      <div class="slot">
-        <div class="slot-card">
-          <div class="time">10:45 – 11:20</div>
-          <div class="slot-title">Transfer spre Pantheon</div>
-          <div class="slot-desc">20 min pe jos de la Piazza di Spagna, sau taxi rapid ~6€. Ajungeți cu 10 minute înainte de intrare.</div>
-          <a href="https://maps.google.com/?q=Pantheon,+Piazza+della+Rotonda,+Roma" target="_blank" class="gmaps">📍 Pantheon</a>
-        </div>
-      </div>
-
-      <div class="slot highlight">
-        <div class="slot-card">
-          <div class="time">11:30 – 13:00 ✅</div>
-          <div class="slot-title">Pantheon ⛩️</div>
-          <div class="slot-desc">Intrare la ora rezervată — <strong>11:30</strong>. Unul dintre cele mai bine conservate monumente antice din lume: 1.900 de ani, cupola intactă. Rafael e înmormântat înăuntru. Vizita durează ~1 oră.</div>
-          <div class="tags"><span class="tag price">5€/pers · Rezervat ✓</span></div>
-          <a href="https://maps.google.com/?q=Pantheon,+Piazza+della+Rotonda,+Roma" target="_blank" class="gmaps">📍 Pantheon</a>
-        </div>
-      </div>
-
-      <div class="slot food">
-        <div class="slot-card">
-          <div class="time">13:00 – 14:30</div>
-          <div class="slot-title">Prânz + Piazza Navona</div>
-          <div class="slot-desc">Piazza Navona e la 5 min pe jos. Prânzul rapid pe o stradă laterală (evitați restaurantele chiar pe piață). Timp suficient să admirați <strong>Fontana dei Quattro Fiumi</strong> a lui Bernini.</div>
-          <div class="tags"><span class="tag price">~15–20€ / 2 pers</span></div>
-          <a href="https://maps.google.com/?q=Piazza+Navona,+Roma" target="_blank" class="gmaps">📍 Piazza Navona</a>
-        </div>
-      </div>
-
-      <div class="slot highlight">
-        <div class="slot-card">
-          <div class="time">14:45 – 17:00 ✅</div>
-          <div class="slot-title">Castel Sant'Angelo 🏰</div>
-          <div class="slot-desc">Intrare la ora rezervată — <strong>14:45</strong>. ~15 min pe jos de la Piazza Navona de-a lungul Tibrului. Fosta mausolee a lui Hadrian, ulterior fortăreață papală cu pasaj secret spre Vatican. Terasele de sus: vedere de 360° — Roma, Vatican, Tibru. Vizita durează ~1.5–2 ore.</div>
-          <div class="tags"><span class="tag price">15€/pers · Rezervat ✓</span></div>
-          <a href="https://maps.google.com/?q=Castel+Sant%27Angelo,+Lungotevere+Castello,+Roma" target="_blank" class="gmaps">📍 Castel Sant'Angelo</a>
-        </div>
-      </div>
-
-      <div class="slot">
-        <div class="slot-card">
-          <div class="time">17:00 – 19:00</div>
-          <div class="slot-title">Ponte Sant'Angelo + aperitivo în Prati</div>
-          <div class="slot-desc">Podul cu îngeri e chiar la ieșirea din Castel — unul dintre cele mai fotografiate locuri din Roma la apus. Cartierul Prati e imediat după pod: cafenele locale, aperitivo, atmosferă fără turiști în exces.</div>
-          <a href="https://maps.google.com/?q=Ponte+Sant%27Angelo,+Roma" target="_blank" class="gmaps">📍 Ponte Sant'Angelo</a>
-        </div>
-      </div>
-
-      <div class="slot food">
-        <div class="slot-card">
-          <div class="time">20:00</div>
-          <div class="slot-title">Cină — Ponte e Parione 🍷</div>
-          <div class="slot-desc">Pe strada de lângă Piazza Navona, 4.7★ cu 5.000 recenzii. Ravioli făcuți în față, paste excelente, atmosferă romană autentică. Rezervare recomandată.</div>
-          <div class="tags"><span class="tag book">Rezervare recomandată</span><span class="tag price">~45–60€ / 2 pers</span></div>
-          <a href="https://maps.google.com/?q=Ponte+e+Parione,+Via+di+Santa+Maria+dell+Anima+62,+Roma" target="_blank" class="gmaps">📍 Ponte e Parione</a>
-        </div>
-      </div>
-
+```
+  <div class="slot food">
+    <div class="slot-card">
+      <div class="time">08:00</div>
+      <div class="slot-title">Mic dejun la hotel</div>
+      <div class="slot-desc">Profitați de micul dejun inclus. Plecați devreme — Fontana di Trevi la 08:45 e o altă lume față de ora 10.</div>
+      <a href="https://maps.google.com/?q=HT6+Hotel+Rome,+Via+del+Tempio+6,+Roma" target="_blank" class="gmaps">📍 HT6 Hotel Rome</a>
     </div>
+  </div>
+
+  <div class="slot highlight">
+    <div class="slot-card">
+      <div class="time">08:45 – 09:45</div>
+      <div class="slot-title">Fontana di Trevi 🌊</div>
+      <div class="slot-desc">De la hotel e 15 min pe jos. La ora aceasta sunt maxim 20–30 persoane — e singura fereastră când funcționează magia locului. Aruncați moneda, faceți fotografiile, bucurați-vă fără îmbulzeală.</div>
+      <div class="tags"><span class="tag tip">Sosire înainte de 09:00 — esențial</span><span class="tag price">Gratuit</span></div>
+      <a href="https://maps.google.com/?q=Fontana+di+Trevi,+Roma" target="_blank" class="gmaps">📍 Fontana di Trevi</a>
+    </div>
+  </div>
+
+  <div class="slot highlight">
+    <div class="slot-card">
+      <div class="time">09:45 – 10:45</div>
+      <div class="slot-title">Piazza di Spagna + Scările Spaniei</div>
+      <div class="slot-desc">10 min pe jos de la Fontana di Trevi. Cele 135 de trepte duc la <strong>Trinità dei Monti</strong> — vederea de sus e frumoasă. Dimineața e și cel mai bun moment înainte să se umple.</div>
+      <div class="tags"><span class="tag price">Gratuit</span></div>
+      <a href="https://maps.google.com/?q=Piazza+di+Spagna,+Roma" target="_blank" class="gmaps">📍 Piazza di Spagna</a>
+    </div>
+  </div>
+
+  <div class="slot">
+    <div class="slot-card">
+      <div class="time">10:45 – 11:20</div>
+      <div class="slot-title">Transfer spre Pantheon</div>
+      <div class="slot-desc">20 min pe jos de la Piazza di Spagna, sau taxi rapid ~6€. Ajungeți cu 10 minute înainte de intrare.</div>
+      <a href="https://maps.google.com/?q=Pantheon,+Piazza+della+Rotonda,+Roma" target="_blank" class="gmaps">📍 Pantheon</a>
+    </div>
+  </div>
+
+  <div class="slot highlight">
+    <div class="slot-card">
+      <div class="time">11:30 – 13:00 ✅</div>
+      <div class="slot-title">Pantheon ⛩️</div>
+      <div class="slot-desc">Intrare la ora rezervată — <strong>11:30</strong>. Unul dintre cele mai bine conservate monumente antice din lume: 1.900 de ani, cupola intactă. Rafael e înmormântat înăuntru. Vizita durează ~1 oră.</div>
+      <div class="tags"><span class="tag price">5€/pers · Rezervat ✓</span></div>
+      <a href="https://maps.google.com/?q=Pantheon,+Piazza+della+Rotonda,+Roma" target="_blank" class="gmaps">📍 Pantheon</a>
+    </div>
+  </div>
+
+  <div class="slot food">
+    <div class="slot-card">
+      <div class="time">13:00 – 14:30</div>
+      <div class="slot-title">Prânz + Piazza Navona</div>
+      <div class="slot-desc">Piazza Navona e la 5 min pe jos. Prânzul rapid pe o stradă laterală (evitați restaurantele chiar pe piață). Timp suficient să admirați <strong>Fontana dei Quattro Fiumi</strong> a lui Bernini.</div>
+      <div class="tags"><span class="tag price">~15–20€ / 2 pers</span></div>
+      <a href="https://maps.google.com/?q=Piazza+Navona,+Roma" target="_blank" class="gmaps">📍 Piazza Navona</a>
+    </div>
+  </div>
+
+  <div class="slot highlight">
+    <div class="slot-card">
+      <div class="time">14:45 – 17:00 ✅</div>
+      <div class="slot-title">Castel Sant'Angelo 🏰</div>
+      <div class="slot-desc">Intrare la ora rezervată — <strong>14:45</strong>. ~15 min pe jos de la Piazza Navona de-a lungul Tibrului. Fosta mausolee a lui Hadrian, ulterior fortăreață papală cu pasaj secret spre Vatican. Terasele de sus: vedere de 360° — Roma, Vatican, Tibru. Vizita durează ~1.5–2 ore.</div>
+      <div class="tags"><span class="tag price">15€/pers · Rezervat ✓</span></div>
+      <a href="https://maps.google.com/?q=Castel+Sant%27Angelo,+Lungotevere+Castello,+Roma" target="_blank" class="gmaps">📍 Castel Sant'Angelo</a>
+    </div>
+  </div>
+
+  <div class="slot">
+    <div class="slot-card">
+      <div class="time">17:00 – 19:00</div>
+      <div class="slot-title">Ponte Sant'Angelo + aperitivo în Prati</div>
+      <div class="slot-desc">Podul cu îngeri e chiar la ieșirea din Castel — unul dintre cele mai fotografiate locuri din Roma la apus. Cartierul Prati e imediat după pod: cafenele locale, aperitivo, atmosferă fără turiști în exces.</div>
+      <a href="https://maps.google.com/?q=Ponte+Sant%27Angelo,+Roma" target="_blank" class="gmaps">📍 Ponte Sant'Angelo</a>
+    </div>
+  </div>
+
+  <div class="slot food">
+    <div class="slot-card">
+      <div class="time">20:00</div>
+      <div class="slot-title">Cină — Ponte e Parione 🍷</div>
+      <div class="slot-desc">Pe strada de lângă Piazza Navona, 4.7★ cu 5.000 recenzii. Ravioli făcuți în față, paste excelente, atmosferă romană autentică. Rezervare recomandată.</div>
+      <div class="tags"><span class="tag book">Rezervare recomandată</span><span class="tag price">~45–60€ / 2 pers</span></div>
+      <a href="https://maps.google.com/?q=Ponte+e+Parione,+Via+di+Santa+Maria+dell+Anima+62,+Roma" target="_blank" class="gmaps">📍 Ponte e Parione</a>
+    </div>
+  </div>
+
+</div>
+```
+
   </div>
 
   <!-- SAMBATA -->
+
   <div class="day-panel" id="day-sam">
     <div class="day-header">
-      <h2>Sâmbătă 16 Mai — Vatican</h2>
-      <p>Dimineață liberă · Vatican 13:00 · Bazilica San Pietro · Trastevere seară</p>
+      <h2>Sâmbătă 16 Mai — Aventino + Vatican</h2>
+      <p>Aventino 09:30 (3 obiective) · Vatican 13:00 · Bazilica San Pietro · Trastevere seară</p>
     </div>
     <div class="timeline">
 
-      <div class="slot food">
-        <div class="slot-card">
-          <div class="time">08:30</div>
-          <div class="slot-title">Mic dejun relaxat la hotel</div>
-          <div class="slot-desc">Vaticanul e la 13:00 — aveți dimineața liberă. Nu vă grăbiți.</div>
-          <a href="https://maps.google.com/?q=HT6+Hotel+Rome,+Via+del+Tempio+6,+Roma" target="_blank" class="gmaps">📍 HT6 Hotel Rome</a>
-        </div>
-      </div>
-
-      <div class="slot">
-        <div class="slot-card">
-          <div class="time">09:30 – 12:00</div>
-          <div class="slot-title">Dimineață liberă — Ghetto Evreiesc + Campo de' Fiori</div>
-          <div class="slot-desc">Hotelul e chiar în Ghetto Evreiesc — unul dintre cele mai vechi și autentice cartiere din Roma. <strong>Campo de' Fiori</strong> e la 5 min pe jos: sâmbătă dimineața are piața de produse proaspete, una dintre cele mai frumoase din oraș. Explorați, cumpărați ceva, plimbați-vă fără program.</div>
-          <div class="tags"><span class="tag price">Gratuit</span></div>
-          <a href="https://maps.google.com/?q=Campo+de+Fiori,+Roma" target="_blank" class="gmaps">📍 Campo de' Fiori — piață sâmbăta</a>
-        </div>
-      </div>
-
-      <div class="slot food">
-        <div class="slot-card">
-          <div class="time">12:00 – 12:30</div>
-          <div class="slot-title">Prânz rapid înainte de Vatican</div>
-          <div class="slot-desc">Ceva ușor — evitați masa grea înainte de 4 ore de mers pe jos prin muzee. Un panino sau pizza al taglio în zona Prati sau pe drum.</div>
-          <div class="tags"><span class="tag price">~10–12€ / 2 pers</span></div>
-        </div>
-      </div>
-
-      <div class="slot transport">
-        <div class="slot-card">
-          <div class="time">12:15</div>
-          <div class="slot-title">Transfer → Vatican</div>
-          <div class="slot-desc">Autobuz <strong>40/46/64</strong> de pe Largo Argentina (5 min pe jos de la hotel) direct spre Vatican, ~15 min. Sau taxi ~10€. <strong>Intrarea muzeelor e pe Viale Vaticano</strong> — nu pe Piazza San Pietro.</div>
-          <div class="tags"><span class="tag warn">Intrarea pe Viale Vaticano, nu pe Piazza San Pietro</span></div>
-          <a href="https://maps.google.com/?q=Largo+di+Torre+Argentina,+Roma" target="_blank" class="gmaps">📍 Stație autobuz Largo Argentina</a>
-        </div>
-      </div>
-
-      <div class="slot highlight">
-        <div class="slot-card">
-          <div class="time">13:00 – 17:00 ✅</div>
-          <div class="slot-title">Muzeele Vaticanului + Capela Sixtină (~4 ore)</div>
-          <div class="slot-desc">Intrare la ora rezervată — <strong>13:00</strong>. Traseul oficial duce prin Galeria Hărților, Stanze di Raffaello, și culminează cu <strong>Capela Sixtină</strong>. Nu vă grăbiți la Sixtină — cel mai bine e să lăsați ochii să se acomodeze și să stați câteva minute în liniște înăuntru.</div>
-          <div class="tags"><span class="tag price">21€/pers · Rezervat ✓</span></div>
-          <a href="https://maps.google.com/?q=Musei+Vaticani,+Viale+Vaticano,+Roma" target="_blank" class="gmaps">📍 Intrare Muzee — Viale Vaticano</a>
-        </div>
-      </div>
-
-      <div class="slot highlight">
-        <div class="slot-card">
-          <div class="time">17:00 – 18:30</div>
-          <div class="slot-title">Bazilica San Pietro + Cupolă ⛪</div>
-          <div class="slot-desc">Intrați direct din muzee prin pasajul interior. Bazilica e <strong>gratuită</strong>. Michelangelo, Bernini, mormintele papilor. Cupolă: <strong>8€ pe jos</strong> sau <strong>10€ cu liftul parțial</strong>. La această oră lumina de după-amiază e superbă pe cupolă.</div>
-          <div class="tags"><span class="tag price">Bazilica gratuită + 8–10€ cupolă</span><span class="tag tip">Fără pantaloni scurți / umeri dezgoliți</span></div>
-          <a href="https://maps.google.com/?q=Basilica+di+San+Pietro+in+Vaticano,+Piazza+San+Pietro,+Roma" target="_blank" class="gmaps">📍 Basilica San Pietro</a>
-        </div>
-      </div>
-
-      <div class="slot">
-        <div class="slot-card">
-          <div class="time">18:30 – 20:00</div>
-          <div class="slot-title">Trastevere — plimbare de seară 🌇</div>
-          <div class="slot-desc">20 min pe jos de la Vatican. Cel mai frumos cartier al Romei la apus. Pavaj de piatră, iederă pe ziduri, piazze mici. Gelato la <strong>Fior di Luna</strong>, aperol spritz în Piazza di Santa Maria in Trastevere.</div>
-          <a href="https://maps.google.com/?q=Piazza+di+Santa+Maria+in+Trastevere,+Roma" target="_blank" class="gmaps">📍 Piazza Santa Maria in Trastevere</a>
-        </div>
-      </div>
-
-      <div class="slot food">
-        <div class="slot-card">
-          <div class="time">20:00</div>
-          <div class="slot-title">Cină — Nannarella (Trastevere) 🌟</div>
-          <div class="slot-desc">4.7★ cu 42.000 recenzii — autentic și nu o capcană turistică. Cacio e pepe, carbonara, coda alla vaccinara. Veniți la 19:30–20:00 pentru a evita coada de după 20:30.</div>
-          <div class="tags"><span class="tag warn">Fără rezervare — veniți devreme</span><span class="tag price">~40–55€ / 2 pers</span></div>
-          <a href="https://maps.google.com/?q=Nannarella,+Piazza+di+San+Calisto+7,+Roma" target="_blank" class="gmaps">📍 Nannarella</a>
-        </div>
-      </div>
-
+```
+  <div class="slot food">
+    <div class="slot-card">
+      <div class="time">08:30</div>
+      <div class="slot-title">Mic dejun la hotel</div>
+      <div class="slot-desc">Plecăm la 09:15 spre Aventino. Îmbrăcați-vă deja pentru Vatican: <strong>umeri acoperiți, fără pantaloni scurți</strong> — nu mai aveți timp să vă schimbați la prânz.</div>
+      <div class="tags"><span class="tag warn">Cod vestimentar Vatican din prima</span></div>
+      <a href="https://maps.google.com/?q=HT6+Hotel+Rome,+Via+del+Tempio+6,+Roma" target="_blank" class="gmaps">📍 HT6 Hotel Rome</a>
     </div>
   </div>
 
+  <div class="slot transport">
+    <div class="slot-card">
+      <div class="time">09:15</div>
+      <div class="slot-title">Transfer → Aventino</div>
+      <div class="slot-desc">15-20 min pe jos prin <strong>Circo Massimo</strong> (frumos pe drum) sau taxi ~7€. Țintă: Giardino degli Aranci, pe vârful colinei.</div>
+      <a href="https://maps.google.com/?q=Giardino+degli+Aranci+Aventino+Roma" target="_blank" class="gmaps">📍 Giardino degli Aranci</a>
+    </div>
+  </div>
+
+  <div class="slot highlight">
+    <div class="slot-card">
+      <div class="time">09:30 – 10:15</div>
+      <div class="slot-title">Giardino degli Aranci 🍊</div>
+      <div class="slot-desc">Grădina cu portocali pe colina Aventinului. <strong>Panoramă spre San Pietro</strong> — un avanpremieră a ce vezi peste 3 ore. Liniștit dimineața, miros de flori de portocal în mai. Belvedere clasic al Romei.</div>
+      <div class="tags"><span class="tag price">Gratuit</span><span class="tag tip">Mai = flori de portocal</span></div>
+      <a href="https://maps.google.com/?q=Giardino+degli+Aranci+Aventino+Roma" target="_blank" class="gmaps">📍 Giardino degli Aranci</a>
+    </div>
+  </div>
+
+  <div class="slot highlight">
+    <div class="slot-card">
+      <div class="time">10:15 – 11:00</div>
+      <div class="slot-title">Roseto Comunale 🌹</div>
+      <div class="slot-desc">5 min pe jos. <strong>1.100 soiuri de trandafiri din toată lumea</strong> — deschis doar 6 săptămâni pe an, fix în mai. Vedere spre Palatino și Circo Massimo. Foarte parfumat, puțini turiști știu de el.</div>
+      <div class="tags"><span class="tag price">Gratuit</span><span class="tag tip">Doar în mai — fereastră unică</span></div>
+      <a href="https://maps.google.com/?q=Roseto+Comunale+Roma" target="_blank" class="gmaps">📍 Roseto Comunale</a>
+    </div>
+  </div>
+
+  <div class="slot highlight">
+    <div class="slot-card">
+      <div class="time">11:00 – 11:30</div>
+      <div class="slot-title">Buco della Serratura 🗝️</div>
+      <div class="slot-desc">5 min pe jos până la <strong>Piazza dei Cavalieri di Malta</strong>. Priviți prin gaura cheii Ordinului de Malta: prin alea de chiparoși, <strong>cupola San Pietro</strong> apare perfect încadrată. Una dintre cele mai magice iluzii optice din Roma. Sâmbătă dimineața coada e mică (5-10 min); duminica devine 1h.</div>
+      <div class="tags"><span class="tag price">Gratuit</span><span class="tag tip">Pregătiți telefonul cu zoom</span></div>
+      <a href="https://maps.google.com/?q=Buco+della+Serratura+Piazza+dei+Cavalieri+di+Malta+Roma" target="_blank" class="gmaps">📍 Knights of Malta keyhole</a>
+    </div>
+  </div>
+
+  <div class="slot">
+    <div class="slot-card">
+      <div class="time">11:30 – 11:45</div>
+      <div class="slot-title">Bonus opțional — Santa Sabina ⛪</div>
+      <div class="slot-desc">3 min pe jos. Una dintre <strong>cele mai vechi biserici din Roma (sec. V)</strong>, încă funcțională. Ușile originale din lemn de chiparos cu basoreliefuri biblice — printre cele mai vechi din lume. Interior simplu, atmosferă rară de basilică paleocreștină.</div>
+      <div class="tags"><span class="tag price">Gratuit</span></div>
+      <a href="https://maps.google.com/?q=Basilica+di+Santa+Sabina+Roma" target="_blank" class="gmaps">📍 Santa Sabina</a>
+    </div>
+  </div>
+
+  <div class="slot transport">
+    <div class="slot-card">
+      <div class="time">11:45 – 12:15</div>
+      <div class="slot-title">Taxi Aventino → Vatican</div>
+      <div class="slot-desc">Direct cu taxi (~15 min, 12-15€). <strong>Nu vă mai întoarceți la hotel</strong> — sunteți deja îmbrăcați corect. Spuneți șoferului: <em>"Viale Vaticano, ingresso musei"</em> — intrarea muzeelor, nu Piața San Pietro.</div>
+      <div class="tags"><span class="tag warn">Viale Vaticano, NU Piazza San Pietro</span></div>
+      <a href="https://maps.google.com/?q=Viale+Vaticano+ingresso+musei+vaticani+Roma" target="_blank" class="gmaps">📍 Intrare Muzee Vatican</a>
+    </div>
+  </div>
+
+  <div class="slot food">
+    <div class="slot-card">
+      <div class="time">12:15 – 12:45</div>
+      <div class="slot-title">Prânz rapid în Prati</div>
+      <div class="slot-desc">Pe <strong>Via Candia</strong> sau <strong>Via Leone IV</strong> — străzi locale lângă intrare. Panino sau pizza al taglio, ceva ușor. Nu mâncare grea — urmează 4 ore în picioare prin muzee.</div>
+      <div class="tags"><span class="tag price">~10–12€ / 2 pers</span></div>
+      <a href="https://maps.google.com/?q=Via+Candia+Roma" target="_blank" class="gmaps">📍 Via Candia (Prati)</a>
+    </div>
+  </div>
+
+  <div class="slot highlight">
+    <div class="slot-card">
+      <div class="time">13:00 – 17:00 ✅</div>
+      <div class="slot-title">Muzeele Vaticanului + Capela Sixtină (~4 ore)</div>
+      <div class="slot-desc">Intrare la ora rezervată — <strong>13:00</strong>. Traseul oficial duce prin Galeria Hărților, Stanze di Raffaello, și culminează cu <strong>Capela Sixtină</strong>. Nu vă grăbiți la Sixtină — cel mai bine e să lăsați ochii să se acomodeze și să stați câteva minute în liniște înăuntru.</div>
+      <div class="tags"><span class="tag price">21€/pers · Rezervat ✓</span></div>
+      <a href="https://maps.google.com/?q=Musei+Vaticani,+Viale+Vaticano,+Roma" target="_blank" class="gmaps">📍 Intrare Muzee — Viale Vaticano</a>
+    </div>
+  </div>
+
+  <div class="slot highlight">
+    <div class="slot-card">
+      <div class="time">17:00 – 18:30</div>
+      <div class="slot-title">Bazilica San Pietro + Cupolă ⛪</div>
+      <div class="slot-desc">Intrați direct din muzee prin pasajul interior. Bazilica e <strong>gratuită</strong>. Michelangelo, Bernini, mormintele papilor. Cupolă: <strong>8€ pe jos</strong> sau <strong>10€ cu liftul parțial</strong>. La această oră lumina de după-amiază e superbă pe cupolă.</div>
+      <div class="tags"><span class="tag price">Bazilica gratuită + 8–10€ cupolă</span><span class="tag tip">Fără pantaloni scurți / umeri dezgoliți</span></div>
+      <a href="https://maps.google.com/?q=Basilica+di+San+Pietro+in+Vaticano,+Piazza+San+Pietro,+Roma" target="_blank" class="gmaps">📍 Basilica San Pietro</a>
+    </div>
+  </div>
+
+  <div class="slot">
+    <div class="slot-card">
+      <div class="time">18:30 – 20:00</div>
+      <div class="slot-title">Trastevere — plimbare de seară 🌇</div>
+      <div class="slot-desc">20 min pe jos de la Vatican. Cel mai frumos cartier al Romei la apus. Pavaj de piatră, iederă pe ziduri, piazze mici. Gelato la <strong>Fior di Luna</strong>, aperol spritz în Piazza di Santa Maria in Trastevere.</div>
+      <a href="https://maps.google.com/?q=Piazza+di+Santa+Maria+in+Trastevere,+Roma" target="_blank" class="gmaps">📍 Piazza Santa Maria in Trastevere</a>
+    </div>
+  </div>
+
+  <div class="slot food">
+    <div class="slot-card">
+      <div class="time">20:00</div>
+      <div class="slot-title">Cină — Nannarella (Trastevere) 🌟</div>
+      <div class="slot-desc">4.7★ cu 42.000 recenzii — autentic și nu o capcană turistică. Cacio e pepe, carbonara, coda alla vaccinara. Veniți la 19:30–20:00 pentru a evita coada de după 20:30.</div>
+      <div class="tags"><span class="tag warn">Fără rezervare — veniți devreme</span><span class="tag price">~40–55€ / 2 pers</span></div>
+      <a href="https://maps.google.com/?q=Nannarella,+Piazza+di+San+Calisto+7,+Roma" target="_blank" class="gmaps">📍 Nannarella</a>
+    </div>
+  </div>
+
+</div>
+```
+
+  </div>
+
   <!-- DUMINICA -->
+
   <div class="day-panel" id="day-dum">
     <div class="day-header">
       <h2>Duminică 17 Mai — Via Appia Antica + Plecare</h2>
@@ -665,244 +721,254 @@
     </div>
     <div class="timeline">
 
-      <div class="slot food">
-        <div class="slot-card">
-          <div class="time">08:30</div>
-          <div class="slot-title">Mic dejun la hotel</div>
-          <div class="slot-desc">Ultimul mic dejun roman. Îmbrăcați-vă comod — zi în aer liber.</div>
-          <a href="https://maps.google.com/?q=HT6+Hotel+Rome,+Via+del+Tempio+6,+Roma" target="_blank" class="gmaps">📍 HT6 Hotel Rome</a>
-        </div>
-      </div>
-
-      <div class="slot transport">
-        <div class="slot-card">
-          <div class="time">09:15</div>
-          <div class="slot-title">Transfer → Via Appia Antica</div>
-          <div class="slot-desc">Taxi ~15€ sau autobuz 118 de la Circo Massimo (~25 min). <strong>Duminica Via Appia e închisă mașinilor</strong> — e cea mai bună zi din săptămână pentru vizitat. Mergeți direct la punctul de închiriere biciclete.</div>
-          <a href="https://maps.google.com/?q=Via+Appia+Antica+58,+Roma" target="_blank" class="gmaps">📍 EcoBike — Via Appia Antica 58</a>
-        </div>
-      </div>
-
-      <div class="slot highlight">
-        <div class="slot-card">
-          <div class="time">10:00 – 13:30</div>
-          <div class="slot-title">Via Appia Antica pe bicicletă 🚴</div>
-          <div class="slot-desc">Cea mai veche șosea din lume — pavată cu pietre de bazalt de acum 2.300 de ani. Închiriați e-bike de la <strong>EcoBike</strong> (Via Appia 58) sau <strong>Bicycl-e</strong> (Via Appia 175). Pe traseu: <strong>Catacombele San Callisto</strong> (intrare ~8€), ruinele de mausolee, câmpuri deschise, <strong>apeductele romane</strong> în depărtare. Duminica strada e goală de mașini — pedalați în tihnă pe pietre antice.</div>
-          <div class="tags"><span class="tag price">~15–20€ bicicletă / 3-4 ore</span><span class="tag tip">E-bike recomandat — pietre de bazalt sunt denivelate</span></div>
-          <a href="https://maps.google.com/?q=Parco+Regionale+dell+Appia+Antica,+Via+Appia+Antica+42,+Roma" target="_blank" class="gmaps">📍 Parcul Via Appia Antica</a>
-        </div>
-      </div>
-
-      <div class="slot food">
-        <div class="slot-card">
-          <div class="time">13:30 – 15:00</div>
-          <div class="slot-title">Ultimul prânz în Roma 🍷</div>
-          <div class="slot-desc">Înapoiați bicicletele și luați taxi înapoi spre centru. Prânz la un restaurant cu rezervare în zona Testaccio sau centro storico. Paste proaspete, tiramisu, un pahar de vino — luați-vă timp pentru ultima masă.</div>
-          <div class="tags"><span class="tag price">~35–50€ / 2 pers</span></div>
-        </div>
-      </div>
-
-      <div class="slot">
-        <div class="slot-card">
-          <div class="time">15:00 – 17:00</div>
-          <div class="slot-title">Check-out + timp liber final</div>
-          <div class="slot-desc">Check-out la hotel (bagajele rămân la concierge). Ultimă espresso la tejghea, câteva souveniruri de pe <strong>Campo de' Fiori</strong> la 5 min de hotel, o ultimă plimbare prin Ghetto Evreiesc.</div>
-          <a href="https://maps.google.com/?q=Campo+de+Fiori,+Roma" target="_blank" class="gmaps">📍 Campo de' Fiori</a>
-        </div>
-      </div>
-
-      <div class="slot transport">
-        <div class="slot-card">
-          <div class="time">17:30 ⚠️</div>
-          <div class="slot-title">Plecare spre Fiumicino</div>
-          <div class="slot-desc">Taxi de la hotel: ~48–55€, ~45–55 min. Duminica seara traficul spre aeroport e relaxat. Trebuie la aeroport <strong>cel târziu 20:00</strong> pentru check-in Wizz Air.</div>
-          <div class="tags"><span class="tag warn">Nu plecați mai târziu de 17:30</span></div>
-          <a href="https://maps.google.com/?q=Aeroporto+Leonardo+da+Vinci+Fiumicino+Roma" target="_blank" class="gmaps">📍 Aeroportul Fiumicino</a>
-        </div>
-      </div>
-
-      <div class="slot transport">
-        <div class="slot-card">
-          <div class="time">20:00</div>
-          <div class="slot-title">Check-in Fiumicino ✅</div>
-          <div class="slot-desc">2 ore 20 minute până la zbor — check-in, securitate, gate, un ultim aperitivo în aeroport.</div>
-        </div>
-      </div>
-
-      <div class="slot highlight">
-        <div class="slot-card">
-          <div class="time">22:20</div>
-          <div class="slot-title">✈️ Roma → București</div>
-          <div class="slot-desc"><em>La revedere, Roma. Arrivederci!</em></div>
-        </div>
-      </div>
-
+```
+  <div class="slot food">
+    <div class="slot-card">
+      <div class="time">08:30</div>
+      <div class="slot-title">Mic dejun la hotel</div>
+      <div class="slot-desc">Ultimul mic dejun roman. Îmbrăcați-vă comod — zi în aer liber.</div>
+      <a href="https://maps.google.com/?q=HT6+Hotel+Rome,+Via+del+Tempio+6,+Roma" target="_blank" class="gmaps">📍 HT6 Hotel Rome</a>
     </div>
   </div>
 
+  <div class="slot transport">
+    <div class="slot-card">
+      <div class="time">09:15</div>
+      <div class="slot-title">Transfer → Via Appia Antica</div>
+      <div class="slot-desc">Taxi ~15€ sau autobuz 118 de la Circo Massimo (~25 min). <strong>Duminica Via Appia e închisă mașinilor</strong> — e cea mai bună zi din săptămână pentru vizitat. Mergeți direct la punctul de închiriere biciclete.</div>
+      <a href="https://maps.google.com/?q=Via+Appia+Antica+58,+Roma" target="_blank" class="gmaps">📍 EcoBike — Via Appia Antica 58</a>
+    </div>
+  </div>
+
+  <div class="slot highlight">
+    <div class="slot-card">
+      <div class="time">10:00 – 13:30</div>
+      <div class="slot-title">Via Appia Antica pe bicicletă 🚴</div>
+      <div class="slot-desc">Cea mai veche șosea din lume — pavată cu pietre de bazalt de acum 2.300 de ani. Închiriați e-bike de la <strong>EcoBike</strong> (Via Appia 58) sau <strong>Bicycl-e</strong> (Via Appia 175). Pe traseu: <strong>Catacombele San Callisto</strong> (intrare ~8€), ruinele de mausolee, câmpuri deschise, <strong>apeductele romane</strong> în depărtare. Duminica strada e goală de mașini — pedalați în tihnă pe pietre antice.</div>
+      <div class="tags"><span class="tag price">~15–20€ bicicletă / 3-4 ore</span><span class="tag tip">E-bike recomandat — pietre de bazalt sunt denivelate</span></div>
+      <a href="https://maps.google.com/?q=Parco+Regionale+dell+Appia+Antica,+Via+Appia+Antica+42,+Roma" target="_blank" class="gmaps">📍 Parcul Via Appia Antica</a>
+    </div>
+  </div>
+
+  <div class="slot food">
+    <div class="slot-card">
+      <div class="time">13:30 – 15:00</div>
+      <div class="slot-title">Ultimul prânz în Roma 🍷</div>
+      <div class="slot-desc">Înapoiați bicicletele și luați taxi înapoi spre centru. Prânz la un restaurant cu rezervare în zona Testaccio sau centro storico. Paste proaspete, tiramisu, un pahar de vino — luați-vă timp pentru ultima masă.</div>
+      <div class="tags"><span class="tag price">~35–50€ / 2 pers</span></div>
+    </div>
+  </div>
+
+  <div class="slot">
+    <div class="slot-card">
+      <div class="time">15:00 – 17:00</div>
+      <div class="slot-title">Check-out + timp liber final</div>
+      <div class="slot-desc">Check-out la hotel (bagajele rămân la concierge). Ultimă espresso la tejghea, câteva souveniruri de pe <strong>Campo de' Fiori</strong> la 5 min de hotel, o ultimă plimbare prin Ghetto Evreiesc.</div>
+      <a href="https://maps.google.com/?q=Campo+de+Fiori,+Roma" target="_blank" class="gmaps">📍 Campo de' Fiori</a>
+    </div>
+  </div>
+
+  <div class="slot transport">
+    <div class="slot-card">
+      <div class="time">17:30 ⚠️</div>
+      <div class="slot-title">Plecare spre Fiumicino</div>
+      <div class="slot-desc">Taxi de la hotel: ~48–55€, ~45–55 min. Duminica seara traficul spre aeroport e relaxat. Trebuie la aeroport <strong>cel târziu 20:00</strong> pentru check-in Wizz Air.</div>
+      <div class="tags"><span class="tag warn">Nu plecați mai târziu de 17:30</span></div>
+      <a href="https://maps.google.com/?q=Aeroporto+Leonardo+da+Vinci+Fiumicino+Roma" target="_blank" class="gmaps">📍 Aeroportul Fiumicino</a>
+    </div>
+  </div>
+
+  <div class="slot transport">
+    <div class="slot-card">
+      <div class="time">20:00</div>
+      <div class="slot-title">Check-in Fiumicino ✅</div>
+      <div class="slot-desc">2 ore 20 minute până la zbor — check-in, securitate, gate, un ultim aperitivo în aeroport.</div>
+    </div>
+  </div>
+
+  <div class="slot highlight">
+    <div class="slot-card">
+      <div class="time">22:20</div>
+      <div class="slot-title">✈️ Roma → București</div>
+      <div class="slot-desc"><em>La revedere, Roma. Arrivederci!</em></div>
+    </div>
+  </div>
+
+</div>
+```
+
+  </div>
+
   <!-- REZERVARI -->
+
   <div class="day-panel" id="day-rezervari">
     <div class="day-header">
       <h2>Checklist Rezervări</h2>
       <p>Bifați fiecare rezervare după ce o faceți</p>
     </div>
 
-    <div class="rez-item done" id="rez-vatican" onclick="toggleRez('rez-vatican')">
-      <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="rez-body">
-        <div class="rez-header"><span class="rez-title">Muzeele Vaticanului + Capela Sixtină</span><span class="rez-pill green">✅ Rezervat</span></div>
-        <div class="rez-desc">Sâmbătă 16 mai · Intrare <strong>13:00</strong> · 2 bilete confirmate.</div>
-        <div class="rez-links">
-          <a href="https://museivaticani.va" target="_blank" class="rez-link primary" onclick="event.stopPropagation()">🎟 museivaticani.va</a>
-          <a href="https://maps.google.com/?q=Musei+Vaticani,+Viale+Vaticano,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
-        </div>
-        <div class="rez-price">21€/pers · Total 42€</div>
-      </div>
+```
+<div class="rez-item done" id="rez-vatican" onclick="toggleRez('rez-vatican')">
+  <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="rez-body">
+    <div class="rez-header"><span class="rez-title">Muzeele Vaticanului + Capela Sixtină</span><span class="rez-pill green">✅ Rezervat</span></div>
+    <div class="rez-desc">Sâmbătă 16 mai · Intrare <strong>13:00</strong> · 2 bilete confirmate.</div>
+    <div class="rez-links">
+      <a href="https://museivaticani.va" target="_blank" class="rez-link primary" onclick="event.stopPropagation()">🎟 museivaticani.va</a>
+      <a href="https://maps.google.com/?q=Musei+Vaticani,+Viale+Vaticano,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
     </div>
+    <div class="rez-price">21€/pers · Total 42€</div>
+  </div>
+</div>
 
-    <div class="rez-item done" id="rez-colosseum" onclick="toggleRez('rez-colosseum')">
-      <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="rez-body">
-        <div class="rez-header"><span class="rez-title">Colosseum + Foro Romano + Palatino</span><span class="rez-pill green">✅ Rezervat</span></div>
-        <div class="rez-desc">Joi 14 mai · Intrare Colosseum <strong>15:00</strong> · Foro+Palatino inclus, acces liber toată ziua · ~4 ore total.</div>
-        <div class="rez-links">
-          <a href="https://www.coopculture.it" target="_blank" class="rez-link primary" onclick="event.stopPropagation()">🎟 coopculture.it</a>
-          <a href="https://maps.google.com/?q=Colosseo,+Piazza+del+Colosseo,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
-        </div>
-        <div class="rez-price">18€/pers · Total 36€</div>
-      </div>
+<div class="rez-item done" id="rez-colosseum" onclick="toggleRez('rez-colosseum')">
+  <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="rez-body">
+    <div class="rez-header"><span class="rez-title">Colosseum + Foro Romano + Palatino</span><span class="rez-pill green">✅ Rezervat</span></div>
+    <div class="rez-desc">Joi 14 mai · Intrare Colosseum <strong>15:00</strong> · Foro+Palatino inclus, acces liber toată ziua · ~4 ore total.</div>
+    <div class="rez-links">
+      <a href="https://www.coopculture.it" target="_blank" class="rez-link primary" onclick="event.stopPropagation()">🎟 coopculture.it</a>
+      <a href="https://maps.google.com/?q=Colosseo,+Piazza+del+Colosseo,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
     </div>
+    <div class="rez-price">18€/pers · Total 36€</div>
+  </div>
+</div>
 
-    <div class="rez-item done" id="rez-pantheon" onclick="toggleRez('rez-pantheon')">
-      <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="rez-body">
-        <div class="rez-header"><span class="rez-title">Pantheon</span><span class="rez-pill green">✅ Rezervat</span></div>
-        <div class="rez-desc">Vineri 15 mai · Intrare <strong>11:30</strong> · 2 bilete confirmate.</div>
-        <div class="rez-links">
-          <a href="https://pantheonroma.com" target="_blank" class="rez-link primary" onclick="event.stopPropagation()">🎟 pantheonroma.com</a>
-          <a href="https://maps.google.com/?q=Pantheon,+Piazza+della+Rotonda,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
-        </div>
-        <div class="rez-price">5€/pers · Total 10€</div>
-      </div>
+<div class="rez-item done" id="rez-pantheon" onclick="toggleRez('rez-pantheon')">
+  <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="rez-body">
+    <div class="rez-header"><span class="rez-title">Pantheon</span><span class="rez-pill green">✅ Rezervat</span></div>
+    <div class="rez-desc">Vineri 15 mai · Intrare <strong>11:30</strong> · 2 bilete confirmate.</div>
+    <div class="rez-links">
+      <a href="https://pantheonroma.com" target="_blank" class="rez-link primary" onclick="event.stopPropagation()">🎟 pantheonroma.com</a>
+      <a href="https://maps.google.com/?q=Pantheon,+Piazza+della+Rotonda,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
     </div>
+    <div class="rez-price">5€/pers · Total 10€</div>
+  </div>
+</div>
 
-    <div class="rez-item done" id="rez-castel" onclick="toggleRez('rez-castel')">
-      <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="rez-body">
-        <div class="rez-header"><span class="rez-title">Castel Sant'Angelo</span><span class="rez-pill green">✅ Rezervat</span></div>
-        <div class="rez-desc">Vineri 15 mai · Intrare <strong>14:45</strong> · 2 bilete confirmate.</div>
-        <div class="rez-links">
-          <a href="https://www.coopculture.it" target="_blank" class="rez-link primary" onclick="event.stopPropagation()">🎟 coopculture.it</a>
-          <a href="https://maps.google.com/?q=Castel+Sant%27Angelo,+Lungotevere+Castello,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
-        </div>
-        <div class="rez-price">15€/pers · Total 30€</div>
-      </div>
+<div class="rez-item done" id="rez-castel" onclick="toggleRez('rez-castel')">
+  <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="rez-body">
+    <div class="rez-header"><span class="rez-title">Castel Sant'Angelo</span><span class="rez-pill green">✅ Rezervat</span></div>
+    <div class="rez-desc">Vineri 15 mai · Intrare <strong>14:45</strong> · 2 bilete confirmate.</div>
+    <div class="rez-links">
+      <a href="https://www.coopculture.it" target="_blank" class="rez-link primary" onclick="event.stopPropagation()">🎟 coopculture.it</a>
+      <a href="https://maps.google.com/?q=Castel+Sant%27Angelo,+Lungotevere+Castello,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
     </div>
+    <div class="rez-price">15€/pers · Total 30€</div>
+  </div>
+</div>
 
-    <div class="rez-item done" id="rez-felice" onclick="toggleRez('rez-felice')">
-      <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="rez-body">
-        <div class="rez-header"><span class="rez-title">Felice a Testaccio — cină joi seară</span><span class="rez-pill green">✅ Rezervat</span></div>
-        <div class="rez-desc">Joi 14 mai · Ora <strong>20:30</strong> · Confirmat.</div>
-        <div class="rez-links">
-          <a href="https://maps.google.com/?q=Felice+a+Testaccio,+Via+Mastro+Giorgio+29,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
-          <a href="tel:+390657468000" class="rez-link phone" onclick="event.stopPropagation()">📞 06 574 6800</a>
-        </div>
-      </div>
+<div class="rez-item done" id="rez-felice" onclick="toggleRez('rez-felice')">
+  <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="rez-body">
+    <div class="rez-header"><span class="rez-title">Felice a Testaccio — cină joi seară</span><span class="rez-pill green">✅ Rezervat</span></div>
+    <div class="rez-desc">Joi 14 mai · Ora <strong>20:30</strong> · Confirmat.</div>
+    <div class="rez-links">
+      <a href="https://maps.google.com/?q=Felice+a+Testaccio,+Via+Mastro+Giorgio+29,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
+      <a href="tel:+390657468000" class="rez-link phone" onclick="event.stopPropagation()">📞 06 574 6800</a>
     </div>
+  </div>
+</div>
 
-    <div class="rez-item done" id="rez-hotel" onclick="toggleRez('rez-hotel')">
-      <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="rez-body">
-        <div class="rez-header"><span class="rez-title">HT6 Hotel Rome</span><span class="rez-pill green">✅ Rezervat</span></div>
-        <div class="rez-desc">14–17 mai · 3 nopți · Mic dejun inclus · 4.7★ · Via del Tempio 6, Ghetto Evreiesc.</div>
-        <div class="rez-links">
-          <a href="https://maps.google.com/?q=HT6+Hotel+Rome,+Via+del+Tempio+6,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
-          <a href="tel:+390668809597" class="rez-link phone" onclick="event.stopPropagation()">📞 +39 06 6880 9597</a>
-        </div>
-      </div>
+<div class="rez-item done" id="rez-hotel" onclick="toggleRez('rez-hotel')">
+  <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="rez-body">
+    <div class="rez-header"><span class="rez-title">HT6 Hotel Rome</span><span class="rez-pill green">✅ Rezervat</span></div>
+    <div class="rez-desc">14–17 mai · 3 nopți · Mic dejun inclus · 4.7★ · Via del Tempio 6, Ghetto Evreiesc.</div>
+    <div class="rez-links">
+      <a href="https://maps.google.com/?q=HT6+Hotel+Rome,+Via+del+Tempio+6,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
+      <a href="tel:+390668809597" class="rez-link phone" onclick="event.stopPropagation()">📞 +39 06 6880 9597</a>
     </div>
+  </div>
+</div>
 
-    <div class="rez-item" id="rez-ponte" onclick="toggleRez('rez-ponte')">
-      <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="rez-body">
-        <div class="rez-header"><span class="rez-title">Ponte e Parione — cină vineri seară</span><span class="rez-pill yellow">🟡 De făcut</span></div>
-        <div class="rez-desc">Vineri 15 mai · Ora 20:00 · Lângă Piazza Navona, 4.7★. Rezervare prin telefon sau TheFork.</div>
-        <div class="rez-links">
-          <a href="https://www.thefork.it" target="_blank" class="rez-link primary" onclick="event.stopPropagation()">🍝 TheFork</a>
-          <a href="https://maps.google.com/?q=Ponte+e+Parione,+Via+di+Santa+Maria+dell+Anima+62,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
-          <a href="tel:+390668192278" class="rez-link phone" onclick="event.stopPropagation()">📞 06 6819 2278</a>
-        </div>
-      </div>
+<div class="rez-item" id="rez-ponte" onclick="toggleRez('rez-ponte')">
+  <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="rez-body">
+    <div class="rez-header"><span class="rez-title">Ponte e Parione — cină vineri seară</span><span class="rez-pill yellow">🟡 De făcut</span></div>
+    <div class="rez-desc">Vineri 15 mai · Ora 20:00 · Lângă Piazza Navona, 4.7★. Rezervare prin telefon sau TheFork.</div>
+    <div class="rez-links">
+      <a href="https://www.thefork.it" target="_blank" class="rez-link primary" onclick="event.stopPropagation()">🍝 TheFork</a>
+      <a href="https://maps.google.com/?q=Ponte+e+Parione,+Via+di+Santa+Maria+dell+Anima+62,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Google Maps</a>
+      <a href="tel:+390668192278" class="rez-link phone" onclick="event.stopPropagation()">📞 06 6819 2278</a>
     </div>
+  </div>
+</div>
 
-    <div class="rez-item" id="rez-appia" onclick="toggleRez('rez-appia')">
-      <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="rez-body">
-        <div class="rez-header"><span class="rez-title">Biciclete Via Appia Antica — duminică</span><span class="rez-pill yellow">🟡 Fără rezervare</span></div>
-        <div class="rez-desc">Duminică 17 mai · Dimineața · Mergeți direct la fața locului. <strong>EcoBike</strong> (Via Appia 58) sau <strong>Bicycl-e</strong> (Via Appia 175). E-bike recomandat — piatra de bazalt e denivelată.</div>
-        <div class="rez-links">
-          <a href="https://maps.google.com/?q=Via+Appia+Antica+58,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 EcoBike</a>
-          <a href="https://maps.google.com/?q=Via+Appia+Antica+175,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Bicycl-e</a>
-        </div>
-        <div class="rez-price">~15–20€/pers pentru 3–4 ore</div>
-      </div>
+<div class="rez-item" id="rez-appia" onclick="toggleRez('rez-appia')">
+  <div class="rez-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="rez-body">
+    <div class="rez-header"><span class="rez-title">Biciclete Via Appia Antica — duminică</span><span class="rez-pill yellow">🟡 Fără rezervare</span></div>
+    <div class="rez-desc">Duminică 17 mai · Dimineața · Mergeți direct la fața locului. <strong>EcoBike</strong> (Via Appia 58) sau <strong>Bicycl-e</strong> (Via Appia 175). E-bike recomandat — piatra de bazalt e denivelată.</div>
+    <div class="rez-links">
+      <a href="https://maps.google.com/?q=Via+Appia+Antica+58,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 EcoBike</a>
+      <a href="https://maps.google.com/?q=Via+Appia+Antica+175,+Roma" target="_blank" class="rez-link maps" onclick="event.stopPropagation()">📍 Bicycl-e</a>
     </div>
+    <div class="rez-price">~15–20€/pers pentru 3–4 ore</div>
+  </div>
+</div>
+```
 
   </div>
 
   <!-- BUGET -->
+
   <div class="day-panel" id="day-buget">
     <div class="day-header">
       <h2>Estimare Buget Total</h2>
       <p>2 persoane · 3 nopți · toate costurile incluse</p>
     </div>
 
-    <table class="budget-table">
-      <tr>
-        <td class="label">Cazare (3 nopți, HT6 Hotel Rome)</td>
-        <td>~900–1.100€</td>
-      </tr>
-      <tr>
-        <td class="label">Taxi aeroport × 2 (dus + întors)</td>
-        <td>~100€</td>
-      </tr>
-      <tr>
-        <td class="label">
-          Bilete obiective (2 persoane)
-          <span class="sub">Colosseum+Foro 36€ · Vatican 42€ · Castel 30€ · Pantheon 10€</span>
-        </td>
-        <td>~118€</td>
-      </tr>
-      <tr>
-        <td class="label">Biciclete Via Appia Antica (duminică)</td>
-        <td>~30–40€</td>
-      </tr>
-      <tr>
-        <td class="label">Mâncare — 4 prânzuri rapide</td>
-        <td>~50–65€</td>
-      </tr>
-      <tr>
-        <td class="label">Mâncare — 4 cine la restaurant</td>
-        <td>~160–210€</td>
-      </tr>
-      <tr>
-        <td class="label">Cafele, gelato, aperitivo, diverse</td>
-        <td>~60–80€</td>
-      </tr>
-      <tr>
-        <td class="label">Transport local (taxi ocazional)</td>
-        <td>~30–40€</td>
-      </tr>
-      <tr class="total-row">
-        <td><strong>Total estimat (fără zbor)</strong></td>
-        <td><strong>~1.450–1.650€</strong></td>
-      </tr>
-    </table>
+```
+<table class="budget-table">
+  <tr>
+    <td class="label">Cazare (3 nopți, HT6 Hotel Rome)</td>
+    <td>~900–1.100€</td>
+  </tr>
+  <tr>
+    <td class="label">Taxi aeroport × 2 (dus + întors)</td>
+    <td>~100€</td>
+  </tr>
+  <tr>
+    <td class="label">
+      Bilete obiective (2 persoane)
+      <span class="sub">Colosseum+Foro 36€ · Vatican 42€ · Castel 30€ · Pantheon 10€</span>
+    </td>
+    <td>~118€</td>
+  </tr>
+  <tr>
+    <td class="label">Biciclete Via Appia Antica (duminică)</td>
+    <td>~30–40€</td>
+  </tr>
+  <tr>
+    <td class="label">Mâncare — 4 prânzuri rapide</td>
+    <td>~50–65€</td>
+  </tr>
+  <tr>
+    <td class="label">Mâncare — 4 cine la restaurant</td>
+    <td>~160–210€</td>
+  </tr>
+  <tr>
+    <td class="label">Cafele, gelato, aperitivo, diverse</td>
+    <td>~60–80€</td>
+  </tr>
+  <tr>
+    <td class="label">Transport local (taxi ocazional)</td>
+    <td>~30–40€</td>
+  </tr>
+  <tr class="total-row">
+    <td><strong>Total estimat (fără zbor)</strong></td>
+    <td><strong>~1.450–1.650€</strong></td>
+  </tr>
+</table>
 
-    <div class="note-box">
-      💡 <strong>Notă:</strong> HT6 Hotel Rome e rezervat — mic dejun inclus, 4.7★, locație perfectă în Ghetto Evreiesc. Cheltuielile rămase (mâncare + bilete + transport local) sunt ~450–550€ pentru 2 persoane pe aproape 4 zile. Zborul Wizz Air e separat.
-    </div>
+<div class="note-box">
+  💡 <strong>Notă:</strong> HT6 Hotel Rome e rezervat — mic dejun inclus, 4.7★, locație perfectă în Ghetto Evreiesc. Cheltuielile rămase (mâncare + bilete + transport local) sunt ~450–550€ pentru 2 persoane pe aproape 4 zile. Zborul Wizz Air e separat.
+</div>
+```
+
   </div>
 
 </div>
@@ -940,5 +1006,6 @@ function toggleRez(id) {
   } catch(e) {}
 })();
 </script>
+
 </body>
 </html>
